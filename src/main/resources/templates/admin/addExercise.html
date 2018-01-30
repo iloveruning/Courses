@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>管理员后台界面</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" href="lib/global.css">
+    <link rel="stylesheet" type="text/css" href="lib/sidebar.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+
+</head>
+
+<body class="bg-gray">
+<header class="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span>管理员 <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-right">
+                        <li class="dropdown-header text-center">账户</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw pull-right"></i> 详情
+                            </a>
+                            <a data-toggle="modal" href="#modal-user-settings">
+                                <i class="fa fa-cog fa-fw pull-right"></i> 设置
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt pull-right"></i> 注销</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="maincontent">
+    <div class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <p>请选择您要上传的作业:</p>
+                <div class="form-inline">
+                    <div class="report-file">
+
+                        <span>上传文件</span>
+                        <input tabindex="3" id="filepreview" size="3" name="report" class="file-prew"
+                               type="file" onchange="showExerciseName()"/>
+                    </div>
+                    <input type="text" id="textName" style="width: 500px" class="form-control"/>
+                    <button class="btn-primary btn" onclick="addExercise()">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/addExercise.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.glxy.mapper.HomeworkMapper">
+
+	<select id="findHomeworkInfo" resultType="map" parameterType="string">
+		SELECT h.id id,h.name name,o.name file,o.view_url fileUrl
+		FROM homework AS h LEFT JOIN office AS o ON h.office_id=o.id
+		WHERE h.course_id=#{cid}
+	</select>
+
+</mapper>

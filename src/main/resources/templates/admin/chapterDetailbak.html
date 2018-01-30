@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>管理员后台界面</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="lib/global.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-right ">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span>管理员 <i class="caret"></i></span>
+                    </a>
+                        <ul class="dropdown-menu  dropdown-menu-right">
+                            <li class="dropdown-header text-center">账户</li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                <i class="fa fa-user fa-fw float-right"></i> 详情
+                            </a>
+                                <a data-toggle="modal" href="#modal-user-settings">
+                                <i class="fa fa-cog fa-fw float-right"></i> 设置
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#"><i class="fa fa-sign-out-alt pull-right"></i> 注销</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="maincontent">
+        <div class="container">
+            <div class="row">
+                <div class="line-frame">
+                    <div class="col-md-4">
+                        <select class="form-control" id="" name="">
+                            <option id="" value="" selected>请选择本章序号</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">绪论</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-block">更新</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row knowledgedot">
+                <div class="col-md-2">
+                    <h3>现有知识点:</h3></div>
+                <div class="col-md-10">
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <h3 class="text-center">本章详情:</h3>
+                <table class="table table-hover">
+                    <!--<caption class="caption">本章详情</caption>-->
+                    <thead>
+                        <tr class="active">
+                            <td>序号</td>
+                            <td>名称</td>
+                            <td>内容简介</td>
+                            <td>详情</td>
+                            <td>删除</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                        </tr>
+                        <tr>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                            <td>何莉莉</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="form-control" id="" name="">
+                        <option id="" value="" selected>请选择本章序号</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">绪论</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-block">更新</button>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="panel-title">添加课时</p>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Jane Doe">
+                            </div>
+                        </div>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="form-control" id="" name="">
+                        <option id="" value="" selected>请选择本章序号</option>
+                        <option id="" value="" selected>请选择本章序号</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">绪论</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-block">更新</button>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <!--这里是富文本编辑器-->
+                <div class="form-group">
+                    <div id="mywangeditor"></div>
+                    <div class="col-md-12">
+                        <hr>
+                        <button class="btn btn-primary btn-block">更新</button>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="active">
+                                <td>序号</td>
+                                <td>中文描述</td>
+                                <td>资料类型</td>
+                                <td>更新</td>
+                                <td>删除</td>
+                                <td>演示</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>序号</td>
+                                <td>中文描述</td>
+                                <td>资料类型</td>
+                                <td>更新</td>
+                                <td>删除</td>
+                                <td>演示</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">上传资料</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="report-file">
+                                <span>上传文件</span>
+                                <input tabindex="3" size="3" name="report" class="file-prew" type="file" onchange="document.getElementById('textName').value=this.value">
+                            </div>
+                            <input type="text" id="textName" style="height: 28px;border:1px solid #f1f1f1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>待提交列表</h5>
+                    <a href="#">Inbox <span class="badge">42</span></a>
+                    <button class="btn btn-primary" type="button">
+                        Messages <span class="badge">4</span>
+                    </button>
+                    <a href="#">Inbox <span class="badge">42</span></a>
+                    <button class="btn btn-primary" type="button">
+                        Messages <span class="badge">4</span>
+                    </button>
+                     <button type="button" class="btn btn-primary">添加到本课</button>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="row knowledgedot">
+                <div class="col-md-2">
+                    <h3>现有知识点:</h3></div>
+                <div class="col-md-10">
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                    <h3 class="btn-link btn">
+                    Messages <a class="badge">*</a>
+                </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/wangEditor.min.js"></script>
+    <script type="text/javascript">
+
+
+    var E = window.wangEditor
+    var editor = new E('#mywangeditor')
+    // 或者 var editor = new E( document.getElementById('editor') )
+    editor.create()
+    </script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+</body>
+
+</html>

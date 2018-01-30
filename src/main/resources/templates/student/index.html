@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>精品课程</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
+    
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+    
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/addLogin.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+    <div class="div-header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="/home">
+                    <img src="img/logo.jpg" alt="logo" />
+                </a>
+            </div>
+            <!--隔离区-->
+            <div class="mainCourse indexList">
+                <a href="" title="">核心课程</a>
+            </div>
+            <div class="teachers indexList">
+                <a href="/teachers" title="">教师团队</a>
+            </div>
+            <!--隔离区-->
+            <div class="search">
+                <input type="text" />
+                <div>
+                    <i class="glyphicon glyphicon-search icno-search"></i>
+                </div>
+            </div>
+            <div class="person" style="display: none;">
+                <img src="" style="border-radius:20px;height:40px;width:40px;" class="userImg">
+                <span style="margin-left:25px;" class="dropdown">
+                    <a class="dropdown-toggle user-name" data-toggle="dropdown" href="#"><b class="caret"></b></a><ul class="dropdown-menu">
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">帮助与反馈</a></li>
+                    <li class="logout"><a href="#">退出登录</a></li>
+                    </ul></span>
+            </div>
+            <div class="user">
+                <ul class="user-list">
+                    <li class="user-oper li user-dl" data-toggle="modal" data-target="#myModaLogin">登录</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper li" data-toggle="modal" data-target="#myModalSign">注册</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper">关于</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="div-body">
+        <div>
+            <div id="one" class="classify">
+                <ul class="classify-ul">
+                    
+                </ul>
+            </div>
+            <div id="wrap">
+                <div id="container">
+                    <div class="img"><img src="img/1.jpg"></div>
+                    <div class="img"><img src="img/2.jpg"></div>
+                    <div class="img"><img src="img/3.jpg"></div>
+                    <div class="img"><img src="img/4.jpg"></div>
+                    <div class="img"><img src="img/5.jpg"></div>
+                    <div class="img"><img src="img/6.jpg"></div>
+                </div>
+                <!-- <div class="btn btn-left"></div>
+                <div class="btn btn-right"></div> -->
+                <div id="index">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div-footer">
+        <div class="f-link">
+            <ul class="">
+                <li class="">
+                    <a href="">联系我们</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">关于网站</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">知识产权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="f-explain">
+            <span>
+      主办方：合肥工业大学管理学院电商系
+    </span>
+            <span>
+      备案号：xxxxxxxxxxxx
+    </span>
+            <br/>
+            <span>
+      说明：本课程适用于大学生教学课程，未经允许，请勿转载！
+    </span>
+        </div>
+    </div>
+</body>
+
+</html>

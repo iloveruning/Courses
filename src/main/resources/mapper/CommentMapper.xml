@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.glxy.mapper.CommentMapper">
+
+
+
+    <insert id="saveAgreement">
+        INSERT INTO agreement(student_id, comment_id)
+        VALUES (#{sid},#{cid})
+    </insert>
+
+
+    <update id="increaseAgreeCount">
+        UPDATE comment SET agree_count=agree_count+1
+        WHERE  id=#{id}
+    </update>
+
+
+    <update id="decreaseAgreeCount">
+        UPDATE comment SET agree_count=agree_count-1
+        WHERE id=#{id}
+    </update>
+
+    <delete id="deleteAgreement">
+        DELETE FROM agreement WHERE student_id=#{sid} AND comment_id=#{cid}
+    </delete>
+
+    <select id="isAgreed" resultType="java.lang.Integer">
+        SELECT count(*) FROM agreement
+        WHERE student_id=#{sid} AND comment_id=#{cid}
+    </select>
+
+    <update id="increaseReply">
+        UPDATE comment SET reply=reply+1
+        WHERE id=#{cid}
+    </update>
+    
+    
+    <update id="decreaseReply">
+        UPDATE comment SET reply=reply-1
+        WHERE id=#{cid}
+    </update>
+
+
+    <select id="findByChapterId" resultType="com.hfut.glxy.entity.Comment">
+        SELECT id,content,agree_count agreeCount,student_id studentId,update_time updateTime,reply
+        FROM comment
+        WHERE chapter_id=#{cid} AND is_pass=1 AND is_delete=0
+        ORDER BY agree_count DESC,update_time DESC
+    </select>
+
+
+    <select id="findById" resultType="com.hfut.glxy.entity.Comment">
+        SELECT id,content,agree_count agreeCount,student_id studentId,update_time updateTime,reply
+        FROM comment
+        WHERE id=#{id}
+    </select>
+
+    <select id="findByStudentId" parameterType="string" resultType="com.hfut.glxy.entity.Comment">
+        SELECT id,content,agree_count agreeCount,update_time updateTime,chapter_id chapterId,reply
+        FROM comment
+        WHERE student_id=#{sid}
+    </select>
+
+
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM comment WHERE id=#{id}
+    </delete>
+
+
+</mapper>

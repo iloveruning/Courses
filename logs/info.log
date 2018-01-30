@@ -1,0 +1,42 @@
+2018-01-29 23:16:59 [org.springframework.boot.StartupInfoLogger:48] - Starting CoursesApplication on DESKTOP-18IRI1J with PID 17056 (started by Shinelon in F:\项目\courses-courses-nightly-a994b81fe4ce952bcc019d93b9081f66623ca23e)
+2018-01-29 23:16:59 [org.springframework.boot.SpringApplication:593] - No active profile set, falling back to default profiles: default
+2018-01-29 23:16:59 [org.springframework.context.support.AbstractApplicationContext:583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@516e60bd: startup date [Mon Jan 29 23:16:59 CST 2018]; root of context hierarchy
+2018-01-29 23:17:02 [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$415da330] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-29 23:17:03 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:89] - Tomcat initialized with port(s): 8896 (http)
+2018-01-29 23:17:03 [org.apache.juli.logging.DirectJDKLog:179] - Starting service [Tomcat]
+2018-01-29 23:17:03 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-29 23:17:03 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2018-01-29 23:17:03 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 4038 ms
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'com.hfut.glxy.filter.AdminFilter' to urls: [/superadmin, /addCourseGroup, /courseGroupList, /addCourse, /courseList, /superadminsidebar, /addTeacher, /teacherList, /superadminWelcome]
+2018-01-29 23:17:03 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'com.hfut.glxy.filter.TeacherFilter' to urls: [/homework, /homework/*, /notice, /notice/*, /admin, /adminsidebar, /addInfo, /infoList, /addChapter, /addData, /addExercise, /addHomework, /chapterDetail, /chapterList, /dataList, /exerciseList, /homeworkList, /adminwelcome, /addComment, /commentList]
+2018-01-29 23:17:05 [com.alibaba.druid.pool.DruidDataSource:922] - {dataSource-1} inited
+2018-01-29 23:17:05 [com.alibaba.druid.pool.DruidDataSource:1817] - {dataSource-1} closed
+2018-01-29 23:17:05 [org.apache.juli.logging.DirectJDKLog:179] - Stopping service [Tomcat]
+2018-01-29 23:17:56 [org.springframework.boot.StartupInfoLogger:48] - Starting CoursesApplication on DESKTOP-18IRI1J with PID 17072 (started by Shinelon in F:\项目\courses-courses-nightly-a994b81fe4ce952bcc019d93b9081f66623ca23e)
+2018-01-29 23:17:56 [org.springframework.boot.SpringApplication:593] - No active profile set, falling back to default profiles: default
+2018-01-29 23:17:57 [org.springframework.context.support.AbstractApplicationContext:583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@63a536ad: startup date [Mon Jan 29 23:17:57 CST 2018]; root of context hierarchy
+2018-01-29 23:18:01 [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bc8aa06b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-29 23:18:02 [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer:89] - Tomcat initialized with port(s): 8896 (http)
+2018-01-29 23:18:02 [org.apache.juli.logging.DirectJDKLog:179] - Starting service [Tomcat]
+2018-01-29 23:18:02 [org.apache.juli.logging.DirectJDKLog:179] - Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-29 23:18:02 [org.apache.juli.logging.DirectJDKLog:179] - Initializing Spring embedded WebApplicationContext
+2018-01-29 23:18:02 [org.springframework.boot.context.embedded.EmbeddedWebApplicationContext:276] - Root WebApplicationContext: initialization completed in 5319 ms
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.ServletRegistrationBean:190] - Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:258] - Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'webStatFilter' to urls: [/*]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'com.hfut.glxy.filter.AdminFilter' to urls: [/superadmin, /addCourseGroup, /courseGroupList, /addCourse, /courseList, /superadminsidebar, /addTeacher, /teacherList, /superadminWelcome]
+2018-01-29 23:18:02 [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean:271] - Mapping filter: 'com.hfut.glxy.filter.TeacherFilter' to urls: [/homework, /homework/*, /notice, /notice/*, /admin, /adminsidebar, /addInfo, /infoList, /addChapter, /addData, /addExercise, /addHomework, /chapterDetail, /chapterList, /dataList, /exerciseList, /homeworkList, /adminwelcome, /addComment, /commentList]
+2018-01-29 23:18:04 [com.alibaba.druid.pool.DruidDataSource:922] - {dataSource-1} inited
+2018-01-29 23:18:05 [com.alibaba.druid.pool.DruidDataSource:1817] - {dataSource-1} closed
+2018-01-29 23:18:05 [org.apache.juli.logging.DirectJDKLog:179] - Stopping service [Tomcat]

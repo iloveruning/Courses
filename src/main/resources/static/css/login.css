@@ -1,0 +1,151 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+    height: 100%;
+    /*Image only BG fallback*/
+    background: url('http://thecodeplayer.com/uploads/media/gs.png');
+    /*background = gradient + image pattern combo*/
+    background:
+            linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),
+            url('http://thecodeplayer.com/uploads/media/gs.png');
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+.login {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+.login fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+/*Hide all except first fieldset*/
+.login fieldset:not(:first-of-type) {
+    display: none;
+}
+/*inputs*/
+/*.login input, .login textarea {*/
+/*padding: 15px;*/
+/*border: 1px solid #ccc;*/
+/*border-radius: 3px;*/
+/*margin-bottom: 10px;*/
+/*width: 100%;*/
+/*box-sizing: border-box;*/
+/*font-family: montserrat;*/
+/*color: #2C3E50;*/
+/*font-size: 13px;*/
+/*}*/
+
+/*buttons*/
+.login .action-button {
+    width: 100%;
+    display: block;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+.login .action-button:hover, .login .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+.login .title {
+    /*padding: 35px;*/
+    font-size: 1.4em;
+    text-align: center;
+}
+.admintab{
+    width: 100%;
+    height: 80px;
+}
+/*.login .chose {*/
+/*height: 50px;*/
+/*border-top: 1px solid #ccc;*/
+/*text-align: center;*/
+/*line-height: 50px;*/
+/*}*/
+
+/*.login .chose:hover {*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.login .chose div {*/
+/*float: left;*/
+/*width: 50%;*/
+/*height: 50px;*/
+/*border-bottom: 1px solid #ccc;*/
+/*}*/
+
+.login input {
+    margin-top: 15px;
+}
+
+.memory, .forget {
+    height: 48px;
+
+}
+
+#usertype {
+    margin-top: 15px;
+}
+
+.super {
+    border-left: 2px solid #ccc;
+}
+
+
+.login div {
+    height: 48px;
+}
+
+.memory {
+    margin-left: 10px;
+    float: left;
+    padding-top: 20px;
+}
+
+.forget {
+    margin-right: 10px;
+    float: right;
+    padding-top: 20px;
+}
+
+
+
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}

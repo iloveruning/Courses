@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>超级管理员后台</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="stylesheet" type="text/css" href="lib/sidebar.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>-->
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_529525_39813guke8h93sor.css">
+</head>
+
+<body>
+<div class="leftnav">
+    <div class="nav-top">
+        <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><span><i class="iconfont icon-guanliyuan"></i><a href="#">超级管理员</a></span></div>
+    </div>
+    <ul><li class="left-nav-item">
+        <a href="/superadminWelcome" target="right"><i class="iconfont icon-zhuye"></i><span>主页</span></a>
+    </li>
+        <li class="left-nav-item">
+            <a href="javascript:;"><i class="iconfont icon-zu"></i><span>课程组管理</span><i
+                    class="iconfont icon-more"></i></a>
+            <ul>
+                <li>
+                    <a href="/addCourseGroup" target="right"><span>添加课程组</span></a>
+                </li>
+                <li>
+                    <a href="/courseGroupList" target="right"><span>课程组列表</span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="left-nav-item">
+            <a href="javascript:;"><i class="iconfont icon-course"></i><span>课程管理</span><i
+                    class="iconfont icon-more"></i></a>
+            <ul>
+                <li>
+                    <a href="/addCourse" target="right"><span>添加课程</span></a>
+                </li>
+             <li>
+                    <a href="/courseList" target="right"><span>课程列表</span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="left-nav-item">
+            <a href="javascript:;"><i class="iconfont icon-teacher"></i><span>教师管理</span><i
+                    class="iconfont icon-more"></i></a>
+            <ul>
+                <li>
+                    <a href="/addTeacher" target="right"><span>添加教师</span></a>
+                </li>
+                <li>
+                    <a href="/teacherList" target="right"><span>教师列表</span></a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="left-nav-item">
+            <a href="/adminlogin" onclick="exit()" target="_parent"><i class="iconfont icon-sign-out"></i><span>注销</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+    function exit() {
+        $.ajax({
+            // url: 'https://www.easy-mock.com/mock/5a50c209aaeb8a0aa380acba/courseadmin/queryCourseById',
+            url: '/exit',
+            type: 'get',
+            dataType: 'json',
+            timeout: 5000,
+            contentType: 'application/json; charset=UTF-8',
+            cache: false
+        })
+            .done(function (data) {
+                alert(data.message);
+                if (data.success){
+                    delCookie("course_id");
+                    /*top.location.href="/login";*/
+                    top.location.href="/adminlogin";
+                }else{
+
+                }
+            })
+            .fail(function () {
+                console.log("error");
+            })
+            .always(function () {
+                console.log("complete");
+            });
+    }
+
+    function delCookie(name){//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间
+        var date = new Date();
+        date.setTime(date.getTime() - 10000);
+        document.cookie = name + "=a; expires=" + date.toGMTString();
+    }
+
+</script>
+
+<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script type="text/javascript" src="lib/sidebar.js"></script>
+</body>
+
+</html>

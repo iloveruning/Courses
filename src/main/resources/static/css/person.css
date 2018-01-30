@@ -1,0 +1,402 @@
+/* person.css */
+*{
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+.div-header{
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-top: 28px;
+
+}
+.div-header .nav-bar{
+  height: 80px;
+  /* width: 80%; */
+  margin: 0 auto;
+}
+
+.div-header .logo{
+  float: left;
+  height: 50px;
+  width: 200px;
+  margin-top: -13px;
+  margin-left: 50px;
+}
+
+.div-header .logo img{
+  width: 200px;
+  height: 50px;
+}
+
+.div-header .indexList{
+  float: left;
+  margin-left: 50px;
+}
+
+.div-header .indexList a{
+    text-decoration: none;
+    color: #4D555D;
+    font-size: 16px;
+    font-family: 楷体;
+    line-height: 35px;
+}
+
+.div-header .search{
+  width: 340px;
+  /* height: 40px; */
+  height: 32px;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  /* margin-left: 7%;  */
+  margin-left: 15%;
+}
+
+.div-header .search .icno-search{
+  margin-right: 0px;
+}
+.div-header .search input{
+  width: 300px;
+  /* height: 35px; */
+  height: 30px;
+  border: none;
+  border: 0px solid #ccc;
+  outline: none;
+  padding-left: 20px;
+  float: left;
+
+}
+.div-header .search div{
+  float: left;
+ /*  margin-top: 15px; */
+  margin-top: 8px;
+}
+
+.div-header .search i:hover{
+  cursor: pointer;
+}
+
+.user{
+  width: 300px;
+  height: 50px;
+  float: right;
+  margin-left: 1.6%;
+  /* float: left; */
+  padding-left: 100px;
+  margin-top: -8px;
+}
+.user .user-list li {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+}
+
+.user .user-list .user-oper:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.user-pile{
+  padding: 0 10px;
+}
+
+.div-body{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.div-body .body-left{
+  /* background-color: rgba(7 , 17, 0, 0.03); */
+  float: left;
+  width: 250px;
+  
+  /* border-right: 1px solid #ccc; */
+  margin-top: 50px;
+}
+
+.div-body ul li {
+  list-style: none;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  padding-top: 17px;
+  padding-left: 15px;
+}
+
+.div-body ul li:hover {
+  cursor: pointer;
+  background-color: #ccc
+}
+
+.div-body ul li i{
+  margin-right: 25px;
+}
+
+.checked {
+  background-color: #ccc;
+}
+
+.body-right{
+  margin-top: 50px;
+  width: 65%;
+  float: left;
+  margin-left: 80px;
+  display: none;
+}
+
+.live{
+  display: block;
+}
+
+
+
+.body-right img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.btn-img{
+  margin-left: 200px;
+  width: 120px;
+  height: 28px;
+  border-radius:14px;
+  border:1px solid green; 
+  line-height: 28px;
+  font-size: 18px;
+  outline: none;
+  background-color: white;
+
+}
+
+.upimg{
+  margin-left: 200px;
+  width: 82px;
+  height: 28px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: -180px;
+
+}
+
+.img a {
+  font-size: 17px;
+  line-height: 15px;
+  color: #b3e7a7;
+  border: 2px solid #b3e7a7;
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+  position: relative;
+  margin-left: 120px;
+}
+
+/* .img input {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+
+.userName, .userTel, .userSex{
+  height: 50px;
+  margin-top: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.userIntro{
+  height: 150px;
+  margin-top: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.userName span, .userSex span{
+  margin-right: 165px;
+  float: left;
+  font-size: 18px;
+  font-family: 楷体;
+}
+
+.userName .span-uName {
+  float: right;
+  margin-top: -30px;
+}
+
+.userTel .span-tel{
+  float: right;
+  margin-top: -30px;
+}
+
+.userIntro .span-explore{
+  float: right;
+  margin-top: -30px;
+}
+
+.userTel span,.userIntro span{
+  margin-right: 128px;
+  float: left;
+  font-size: 18px;
+  font-family: 楷体;
+}
+
+.userName span input,.userTel span input{
+  width: 350px;
+}
+
+.personal .change:hover{
+  cursor: pointer;
+}
+
+ .userIntro span textarea {
+  max-width: 350px;
+  max-height: 80px;
+  min-height: 80px;
+  min-width: 350px;
+ }
+
+ .save{
+  margin-top: 25px;
+ }
+
+ .t-one,.t-two{
+  font-size: 18px;
+  color: #ccc;
+  display: none;
+ }
+
+ .learning .act,.asking .act{
+  display: block;
+ }
+
+ .course{
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #ccc;
+ }
+
+ .course-top{
+  margin-top: 25px;
+  height: 50px;
+ }
+
+ .course-top .per-img{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 150px;
+ }
+
+ .course-top span{
+  font-size: 16px;
+  font-family: 楷体;
+  color: #7e6f5d;
+  font-weight: 700;
+  margin-left: -120px;
+ }
+
+.course-bottom{
+  margin-top: 15px;
+}
+
+.course-bottom .title{
+  float: left;
+  background-color: #f2f4f6;
+  height: 190px;
+  width: 60%;
+  padding-top: 5px;
+}
+
+.course-bottom img{
+  border-radius: 0px;
+  height: 190px;
+  width: 150px;
+  float: left;
+}
+
+.course-bottom .title p{
+  margin-left: 30px;
+  line-height: 20px;
+  color: #565b60;
+  font-size: 14px;
+}
+
+.course-bottom .title a {
+  margin-left: 50px;
+  margin-top: 25px;
+}
+
+.course-bottom .title .c-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.asking .div-left {
+  float: left;
+}
+
+.asking .div-left img{
+  width: 40px;
+  height: 40px;
+}
+
+.asking .div-right{
+  float: left;
+  margin-left: 25px;
+}
+
+.asking .div-right div span {
+  margin-right: 25px;
+  font-size: 14px;
+  color: #b9b7b5;
+  float: left;
+}
+
+
+.div-footer{
+  margin-top: 50px;
+  height: 200px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.div-footer .f-link{
+  width: 310px;
+  height: 50px;
+  margin: 0px auto;
+}
+
+.div-footer .f-link ul li{
+  float: left;
+  list-style: none;
+  margin: 10px;
+  line-height: 50px;
+}
+
+.div-footer .f-explain{
+  color: gray;
+  font-size: 14px;
+  font-family: 楷体;
+  width:500px;
+  margin: 0 auto;
+}
+
+.div-footer .f-explain span{
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}

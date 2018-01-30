@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎使用精品课程后台管理系统</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css" />
+
+</head>
+<body>
+<div class="login">
+    <fieldset>
+        <p class="title">
+            管理员登录
+        </p>
+        <!--<div class="chose">-->
+        <!--<div class="manage">管理员</div>-->
+        <!--<div class="super">超级管理员</div>-->
+        <!--</div>-->
+
+        <!--山地到-->
+        <form id="loginForm" method="post">
+            <div class="admintab">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#" id="manage" role="tab" data-toggle="tab">管理员</a>
+                    </li>
+                    <li role="presentation"><a href="#" role="tab" id="super" data-toggle="tab">超级管理员</a></li>
+
+                </ul>
+            </div>
+            <!--山地到-->
+            <!--隔离区-->
+
+            <select id="usertype" name="usertype" class=" form-control" data-live-search="false">
+                <option value="">请选择课程</option>
+            </select>
+            <!--隔离区-->
+            <input type="text" id="user" name="user-name" class="form-control user-name" placeholder="请输入用户名..." />
+            <input type="password" id="pswd" name="user-psw" class="form-control user-psw" autocomplete placeholder="请输入密码..." />
+            <div class="">
+                <span class="memory">
+          <input type="checkbox" name="" id="chek" class="check" /><label for="chek">&nbsp;&nbsp;记住密码</label>
+        </span>
+                <span class="forget">
+          <a href="javascript:void(0);">忘记密码？</a>
+        </span>
+            </div>
+
+            <input type="button" name="next" id="loginbutton" class="action-button " value="登录" /></form>
+    </fieldset>
+</div>
+<script src="lib/jquery-2.2.4.js"></script>
+<script src="http://apps.bdimg.com/libs/Cookies.js/0.4.0/cookies.min.js"></script>
+<script src="js/login.js"></script>
+<script src="lib/bootstrap/bootstrap.js"></script>
+</body>
+</html>

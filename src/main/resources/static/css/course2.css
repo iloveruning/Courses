@@ -1,0 +1,295 @@
+/* course2.css */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    min-width: 1370px;
+}
+
+#div{
+  display: none;
+}
+
+.div-header{
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-top: 28px;
+
+}
+.div-header .nav-bar{
+  height: 80px;
+  /* width: 80%; */
+  margin: 0 auto;
+}
+
+.div-header .logo{
+  float: left;
+  height: 50px;
+  width: 200px;
+  margin-top: -13px;
+  margin-left: 50px;
+}
+
+.div-header .logo img{
+  width: 200px;
+  height: 50px;
+}
+
+.div-header .indexList{
+  float: left;
+  margin-left: 50px;
+}
+
+.div-header .indexList a{
+    text-decoration: none;
+    color: #4D555D;
+    font-size: 16px;
+    font-family: 楷体;
+    line-height: 35px;
+}
+
+.div-header .search{
+  width: 340px;
+  /* height: 40px; */
+  height: 32px;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  /* margin-left: 7%;  */
+  margin-left: 15%;
+}
+
+.div-header .search .icno-search{
+  margin-right: 0px;
+}
+.div-header .search input{
+  width: 300px;
+  /* height: 35px; */
+  height: 30px;
+  border: none;
+  border: 0px solid #ccc;
+  outline: none;
+  padding-left: 20px;
+  float: left;
+
+}
+.div-header .search div{
+  float: left;
+ /*  margin-top: 15px; */
+  margin-top: 8px;
+}
+
+.div-header .search i:hover{
+  cursor: pointer;
+}
+
+.user{
+  width: 300px;
+  height: 50px;
+  float: right;
+  margin-left: 1.6%;
+  /* float: left; */
+  padding-left: 100px;
+  margin-top: -8px;
+}
+.user .user-list li {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+}
+
+.user .user-list .user-oper:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.user-pile{
+  padding: 0 10px;
+}
+.div-body {
+    margin: 0 auto;
+    width: 100%;
+    /* background-color: #f8f8f8; */
+    /* border: 1px solid red; */
+    height: auto;
+}
+.div-body .body-top{
+  background-image: url('http://pic2.16pic.com/00/11/31/16pic_1131583_b.jpg');
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
+  background-size: 100% 200%;
+  padding-top: 20px;
+}
+.div-body .main{
+  width: 80%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.div-body p{
+  margin-left: 30px;
+  line-height: 50px;
+}
+.div-body .source{
+  font-size: 12px;
+  font-family: 楷体;
+
+}
+.div-body .name{
+  font-size: 32px;
+  font-family: 楷体;
+  font-weight: 600;
+}
+.div-body .begin a {
+  margin-left: 70px;
+  margin-top: 25px;
+  float: left;
+}
+.div-body .begin div {
+  float: left;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+.div-body .begin div span{
+  width: 80px;
+  height: 25px;
+  font-size: 12px;
+  color: black;
+  margin:0 20px;
+  float: left;
+  text-align: center;
+}
+.div-body .begin div .line {
+  width: 0px;
+  height: 25px;
+  margin:0px 0px;
+  border-left: 1px solid #ccc;
+}
+.div-body .body-main{
+  padding-top: 30px;
+  margin: 0 auto;
+  width: 80%;
+  /* border: 1px solid red; */
+}
+.div-body .body-main .main-left{
+  width: 65%;
+  /* border-right: 1px solid #ccc; */
+  float: left;
+}
+.div-body .body-main .main-left .course-intro{
+  line-height: 24px;
+  font-size: 12px;
+  font-family: 楷体;
+  color: #89848e;
+}
+.div-body .body-main .main-left .course-intro a {
+  width:100px ;
+}
+.div-body .body-main .main-left .chapter{
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: 楷体;
+  color: #89848e;
+}
+hr{
+  border-top: 2px solid #ccc;
+}
+.div-body .body-main .main-right{
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+}
+.div-body .body-main .main-right p{
+  font-size: 18px;
+}
+.div-body .body-main .main-right img{
+  width: 100px;
+  height: 100px;
+  margin-left: 35px;
+}
+
+.div-body .body-main .main-right .teacher-intro{
+  margin-top: 30px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #908686;
+}
+.div-body .body-main .main-right .datas p{
+  font-size: 18px;
+}
+.div-body .body-main .main-right .datas ul li{
+  padding-top: 10px;
+  margin-left: 35px;
+  margin-top: 20px;
+  width: 120px;
+  height: 140px;
+  float: left;
+  border: 1px solid #ccc;
+}
+.div-body .body-main .main-right .datas ul li img{
+  margin-left: 10px;
+  text-align: center;
+}
+.div-body .body-main .main-right .datas ul li a p{
+  text-align: center;
+  font-size: 11px;
+  margin-left: 0px;
+  line-height: 20px;
+}
+/* .div-body .body-main .main-left .point,.div-body .body-main .main-left .works{
+  margin-top: 30px;
+} */
+.div-body .body-main .main-left .point p, .div-body .body-main .main-left .works p {
+  margin-top: 100px;
+  font-size: 20px;
+  font-family: 楷体;
+  color: #89848e;
+  /* background-color: #ccc */
+}
+.div-body .body-main .main-left .point ul li{
+  float: left;
+  margin-left: 25px;
+}
+
+.div-body .body-main .main-left .point ul,.div-body .body-main .main-left .works ul{
+  margin-left: 55px;
+}
+
+
+.div-footer {
+    margin-top: 50px;
+    height: 200px;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.div-footer .f-link {
+    width: 310px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.div-footer .f-link ul li {
+    float: left;
+    list-style: none;
+    margin: 10px;
+    line-height: 50px;
+}
+
+.div-footer .f-explain {
+    color: gray;
+    font-size: 14px;
+    font-family: 楷体;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.div-footer .f-explain span {
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+

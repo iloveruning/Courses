@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>管理员后台界面</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" href="lib/global.css">
+    <link rel="stylesheet" type="text/css" href="lib/sidebar.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+
+<body class="bg-gray">
+<header class="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span>管理员 <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-right">
+                        <li class="dropdown-header text-center">账户</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw pull-right"></i> 详情
+                            </a>
+                            <a data-toggle="modal" href="#modal-user-settings">
+                                <i class="fa fa-cog fa-fw pull-right"></i> 设置
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt pull-right"></i> 注销</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="maincontent" id="showchapter" style="display: none">
+    <div class="container">
+        <div class="row">
+            <div class="line-frame">
+                <div class="col-md-4">
+                    <select class="form-control" id="selectShownChapterNumber" name="">
+                        <option value="">请选择本章序号</option>
+                        <option value="第1章">第1章</option>
+                        <option value="第2章">第2章</option>
+                        <option value="第3章">第3章</option>
+                        <option value="第4章">第4章</option>
+                        <option value="第5章">第5章</option>
+                        <option value="第6章">第6章</option>
+                        <option value="第7章">第7章</option>
+                        <option value="第8章">第8章</option>
+                        <option value="第9章">第9章</option>
+                        <option value="第10章">第10章</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input id="totalId" VALUE="" style="display:none;"/>
+                        <span class="input-group-addon" id="xulun">标题</span>
+                        <input id="selectShownChapterTitle" type="text" class="form-control" placeholder=""
+                               aria-describedby="xunlun">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-block" onclick="updateShownChapter()" id="updateShownChapter">
+                        更新
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row knowledgedot">
+            <div class="col-md-2">
+                <h3>现有知识点:</h3></div>
+            <div class="col-md-10" id="zhishidianList">
+            </div>
+        </div>
+        <hr/>
+        <div class="row line-frame">
+            <div class="col-md-2 text-right">
+                <h4>请选择知识点:</h4></div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="您要添加的知识点" name="" id="addZhishidianInput"/>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary btn-block" onclick="addZhishidian()" id="addZhishidian">添加</button>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="text-center">本章详情:</h3>
+            <table class="table table-hover" id="unitListTable">
+                <!--<caption class="caption">本章详情</caption>-->
+                <thead>
+                <tr class="active">
+                    <td>序号</td>
+                    <td>名称</td>
+                    <td>内容简介</td>
+                    <td>详情</td>
+                    <td>删除</td>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <hr/>
+        <div class="row">
+            <div class="panel panel-default ">
+                <div class="form-content"></div>
+                <div class="panel-heading">
+                    <p class="panel-title">添加课时</p>
+                </div>
+                <div class="panel-body text-center">
+                    <div class="form-content">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input style="display: none" type="text" name="" id="selectSerialId"/>
+                                <label for="selectChapterSerialNumber">请选择本课序号:</label>
+                                <select id="selectChapterSerialNumber" style="width: 500px" class="form-control">
+                                    <option value="">请选择本课序号</option>
+                                    <option value="第1课">第1课</option>
+                                    <option value="第2课">第2课</option>
+                                    <option value="第3课">第3课</option>
+                                    <option value="第4课">第4课</option>
+                                    <option value="第5课">第5课</option>
+                                    <option value="第6课">第6课</option>
+                                    <option value="第7课">第7课</option>
+                                    <option value="第8课">第8课</option>
+                                    <option value="第9课">第9课</option>
+                                    <option value="第10课">第10课</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="inputChapterName">请输入本课名称:</label>
+                                <input type="text" class="form-control" style="width: 500px" id="inputChapterName"
+                                       placeholder="跟何老师一起学电商">
+                            </div>
+                            <button class="btn btn-primary btn-block" onclick="addSerialNumber()">添加</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidecourses" id="hidecourses">
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="form-control" id="selectupdateSerial" name="">
+                        <option value="">请选择本课序号</option>
+                        <option value="第1课">第1课</option>
+                        <option value="第2课">第2课</option>
+                        <option value="第3课">第3课</option>
+                        <option value="第4课">第4课</option>
+                        <option value="第5课">第5课</option>
+                        <option value="第6课">第6课</option>
+                        <option value="第7课">第7课</option>
+                        <option value="第8课">第8课</option>
+                        <option value="第9课">第9课</option>
+                        <option value="第10课">第10课</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input value="" id="unitIdInput" style="display: none;"/>
+                        <span class="input-group-addon" id="myspan">名字</span>
+                        <input type="text" id="inputUpdateSerial" class="form-control" placeholder=""
+                               aria-describedby="myspan">
+                    </div>
+                </div>
+                <!--<div class="col-md-4">
+                    <button class="btn btn-primary btn-block">更新</button>
+                </div>-->
+            </div>
+            <hr/>
+            <div class="row">
+                <!--这里是富文本编辑器-->
+                <div class="form-group">
+                    <div id="mywangeditor"></div>
+                    <div class="col-md-12">
+                        <hr>
+                        <button class="btn btn-primary btn-block" onclick="updateSerialNumber()">更新</button>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-hover" id="officeListTable">
+                        <thead>
+                        <tr class="active">
+                            <td>序号</td>
+                            <td>中文描述</td>
+                            <td>资料名称</td>
+                            <td>演示</td>
+                            <td>更新</td>
+                            <td>删除</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">上传资料</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-inline">
+                                <div class="report-file">
+
+                                    <span>上传文件</span>
+                                    <input tabindex="3" id="filepreview" size="3" name="report" class="file-prew"
+                                           type="file" onchange="showFileName()"/>
+                                </div>
+                                <input type="text" id="textName" style="width: 600px" class="form-control"/>
+                                <select class="form-control" id="fileDescription" name="">
+                                    <option value="">请选择资料描述</option>
+                                    <option value="单元习题">单元习题</option>
+                                    <option value="教学课件">教学课件</option>
+                                    <option value="考试大纲">考试大纲</option>
+                                    <option value="辅助资料">辅助资料</option>
+                                </select>
+                                <button class="btn btn-primary btn-block" onclick="uploadFile()">上传</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>待提交列表</h5>
+                    <div id="uploadFiles">
+
+                    </div>
+                    <button class="btn btn-primary" onclick="addFilesToCourse()">添加到本课</button>
+                </div>
+
+            </div>
+            <div class="row line-frame knowledgedot">
+                <div class="row knowledgedot">
+                    <div class="col-md-2">
+                        <h3>现有知识点:</h3></div>
+                    <div class="col-md-10" id="updatezhishidianList">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="">
+                    <div class="col-md-4"><label class="h4 text-right" for="zhishidianSelect">添加知识点:</label></div>
+                    <div class="col-md-4"><select name="" id="zhishidianSelect" class="form-control"></select></div>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-block" onclick="addzhishidianSelect()">添加</button>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+
+
+
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-hover" id="videoListTable">
+                        <thead>
+                        <tr class="active">
+                            <td>序号</td>
+                            <td>中文描述</td>
+                            <td>视频名称</td>
+                            <td>播放</td>
+                            <td>更新</td>
+                            <td>删除</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <p class="panel-title">上传视频</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-inline">
+                                <div class="report-file">
+
+                                    <span>上传视频</span>
+                                    <input tabindex="3" id="videoPreview" size="3" name="report" class="file-prew"
+                                           type="file" onchange="showVideoName()"/>
+                                </div>
+                                <input type="text" id="videoName" style="width: 600px" class="form-control"/>
+                                <input type="text" class="form-control" style="width: 500px" id="videoDescription"
+                                       placeholder="请输入视频描述">
+                                <button class="btn btn-primary btn-block" onclick="uploadVideo()">上传</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>待提交列表</h5>
+                    <div id="uploadVideos">
+
+                    </div>
+                    <button class="btn btn-primary" onclick="addVideosToUnit()">添加到本课</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--这里是添加课程章节界面-->
+<section class="maincontent bg-gray" id="submitchapter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="lightgreen-font">添加章节</h1>
+                <div class="templatemo-container">
+                    <div class="form-group">
+                        <div class="control-wrapper">
+                            <label class="control-label" for="selectChapterNumber">请选择本章序号:</label>
+                            <select name="" class="form-control" id="selectChapterNumber">
+                                <option selected value=""> 请选择本章序号</option>
+                                <option value="第1章">第1章</option>
+                                <option value="第2章">第2章</option>
+                                <option value="第3章">第3章</option>
+                                <option value="第4章">第4章</option>
+                                <option value="第5章">第5章</option>
+                                <option value="第6章">第6章</option>
+                                <option value="第7章">第7章</option>
+                                <option value="第8章">第8章</option>
+                                <option value="第9章">第9章</option>
+                                <option value="第10章">第10章</option>
+                            </select>
+                        </div>
+                        <div class="control-wrapper">
+                            <label class="control-label" for="selectTitle">请选择本章标题:</label>
+                            <input class="form-control " placeholder="绪论" type="text" name="" id="selectTitle">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button target="right" class="btn btn-default btn-block" onclick="addChapterTo()">添加
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="reset" class="btn btn-default btn-block" onclick="clearforms()">重置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--单元详情的模态框-->
+<div class="modal fade" style="z-index: 100000" id="unitModal" role="dialog" aria-labelledby="mymodallog"
+     data-backdrop="static"
+     aria-hidden='true'>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">教学单元详情</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <!--单元基本信息-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span>单元序号</span>
+                            <select class="form-control" id="unumber" name="">
+                                <option value="">请选择本课序号</option>
+                                <option value="第1课">第1课</option>
+                                <option value="第2课">第2课</option>
+                                <option value="第3课">第3课</option>
+                                <option value="第4课">第4课</option>
+                                <option value="第5课">第5课</option>
+                                <option value="第6课">第6课</option>
+                                <option value="第7课">第7课</option>
+                                <option value="第8课">第8课</option>
+                                <option value="第9课">第9课</option>
+                                <option value="第10课">第10课</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="uid" name="uid"
+                                   required="required"
+                                   class="form-control" style="display: none"/>
+                            <label for="uname">单元名称</label>
+                            <input type="text" id="uname" name="uname" placeholder="请输入单元名称"
+                                   required="required"
+                                   class="form-control"/>
+                        </div>
+                        <div class="col-md-12" id="showEditor">
+
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-block btn-info" onclick="updateModalUnit()">更新</button>
+                        </div>
+                        <hr/>
+
+                    </div>
+
+                    <hr/>
+
+                    <!--资料部分-->
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="panel-title">上传资料</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-12">
+                                    <div class="report-file">
+                                        <span>上传文件</span>
+                                        <input tabindex="3" id="modalFilePreview" size="3" name="report"
+                                               class="file-prew"
+                                               type="file" onchange="showModalFileName()"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" id="modalFileName" style="width: 100%"
+                                           class="form-control"/>
+                                    <select class="form-control" id="modalFileDescription" name="" style="width: 100%">
+                                        <option value="">请选择资料描述</option>
+                                        <option value="单元习题">单元习题</option>
+                                        <option value="教学课件">教学课件</option>
+                                        <option value="考试大纲">考试大纲</option>
+                                        <option value="辅助资料">辅助资料</option>
+                                    </select>
+                                    <button class="btn btn-block" onclick="uploadModalFile()">上传</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <h5>待提交列表</h5>
+                        <div id="uploadModalFiles">
+
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="addModalFilesToCourse()">添加到本课</button>
+                    </div>
+                    <div class="row">
+
+                        <table class="table table-hover" id="modalFileList">
+                            <thead>
+                            <tr class="active">
+                                <td>序号</td>
+                                <td>中文描述</td>
+                                <td>资料名称</td>
+                                <td>演示</td>
+                                <td>更新</td>
+                                <td>删除</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-2">
+                            <h5>现有知识点:</h5></div>
+                        <div class="col-md-10" id="modalKPList">
+
+
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row line-frame">
+                        <div class="col-md-2 text-right">
+                            <h4>请选择知识点:</h4>
+                        </div>
+                        <div class="col-md-4">
+                            <select name="" id="modalKPSelect" class="form-control"></select>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-block" onclick="addModalKP()">添加</button>
+                        </div>
+                    </div>
+
+                    <hr/>
+
+
+                    <!--视频部分-->
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="panel-title">上传视频</p>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-12">
+                                    <div class="report-file">
+                                        <span>上传视频</span>
+                                        <input tabindex="3" id="modalVideoPreview" size="3" name="report"
+                                               class="file-prew"
+                                               type="file" onchange="showModalVideoName()"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" id="modalVideoName" style="width: 100%"
+                                           class="form-control"/>
+                                    <input class="form-control" id="modalVideoDescription" name="" style="width: 100%"
+                                    placeholder="请输入视频描述">
+                                    </input>
+                                    <button class="btn btn-block" onclick="uploadModalVideo()">上传</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <h5>待提交列表</h5>
+                        <div id="uploadModalVideos">
+
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="addModalVideosToUnit()">添加到本课</button>
+                    </div>
+                    <div class="row">
+
+                        <table class="table table-hover" id="modalVideoList">
+                            <thead>
+                            <tr class="active">
+                                <td>序号</td>
+                                <td>中文描述</td>
+                                <td>视频名称</td>
+                                <td>播放</td>
+                                <td>更新</td>
+                                <td>删除</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<!--<script type="text/javascript">
+    function updateSerialNumber() {
+        console.log(editor);
+    }
+</script>-->
+<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/addChapter.js"></script>
+<script type="text/javascript" src="lib/wangEditor.min.js"></script>
+<script src="lib/datatable/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="lib/datatable/js/dataTables.bootstrap.js" type="text/javascript"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+</body>
+
+</html>

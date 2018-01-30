@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="css/person.css" />
+    <link rel="stylesheet" type="text/css" href="css/comment.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css" />
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/addLogin.js"></script>
+    <script src="js/person.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/commentSix.js"></script>
+</head>
+
+<body>
+    <div class="div-header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="/home">
+          <img src="img/logo.jpg" alt="logo" />
+        </a>
+            </div>
+            <!--隔离区-->
+            <div class="mainCourse indexList">
+                <a href="" title="">核心课程</a>
+            </div>
+            <div class="teachers indexList">
+                <a href="teachers.html" title="">教师团队</a>
+            </div>
+            <!--隔离区-->
+            <div class="search">
+                <input type="text" />
+                <div>
+                    <i class="glyphicon glyphicon-search icno-search"></i>
+                </div>
+            </div>
+            <div class="person" style="display: none;">
+                <img src="" style="border-radius:20px;height:40px;width:40px;" class="userImg">
+                <span style="margin-left:25px;" class="dropdown">
+                    <a class="dropdown-toggle user-name" data-toggle="dropdown" href="#"><b class="caret"></b></a><ul class="dropdown-menu">
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">帮助与反馈</a></li>
+                    <li class="logout"><a href="#">退出登录</a></li>
+                    </ul></span>
+            </div>
+            <div class="user">
+                <ul class="user-list">
+                    <li class="user-oper li user-dl" data-toggle="modal" data-target="#myModaLogin">登录</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper li" data-toggle="modal" data-target="#myModalSign">注册</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper">关于</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-body">
+        <div class="body-left">
+            <ul>
+                <li id="personal" class="checked"><i class="  glyphicon glyphicon-user"></i>个人资料</li>
+                <li id="learning" class=""><i class="  glyphicon glyphicon-expand"></i>学习课程</li>
+                <li id="asking" class=""><i class="  glyphicon glyphicon-edit"></i>我的评论</li>
+            </ul>
+        </div>
+        <div class="body-right live personal">
+            <div class="img">
+                <img src="" id="image" />
+                <a title="" unselectable='on' class="btn uping" />
+                    <form action="/" method="get" accept-charset="utf-8">
+                        <input type="file" name="file" accept="image/*" class="upimg" id="upfile" />
+                    <p>上传头像</p>
+                    </form>
+                    
+                </a>
+            </div>
+            <div class="userName">
+                <span> 昵称 </span>
+                <span><input type="text" class=" form-control uName" name="" /></span>
+                <span class="change span-uName">修改</span>
+            </div>
+            <div class="userTel">
+                <span> 联系方式 </span>
+                <span><input type="text" class=" form-control tel" name="" placeholder="请输入手机号..." /></span>
+                <span class="change span-tel">修改</span>
+            </div>
+            <div class="userSex">
+                <span> 性别 </span>
+                <span>
+                  <div class="form-group">
+                    <label class="radio-inline">
+                      <input type="radio" value="1" name="sex">男性
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" value="2" name="sex">女性
+                    </label>
+                    <label class="radio-inline">
+                      <input checked="checked" type="radio" value="0" name="sex">保密
+                    </label>
+                  </div>
+              </span>
+            </div>
+            <div class="userIntro">
+                <span> 个人简介 </span>
+                <span><textarea class="form-control explore" rows="3" cols="25" ></textarea>
+                </span>
+                <span class="change span-explore">修改</span>
+            </div>
+            <input type="button" class="btn btn-success save" name="" value="保存" />
+        </div>
+        <div class="body-right learning">
+            <center>
+                <p class="act t-one">您还没有学习课程哟，快去投入知识的海洋吧....</p>
+                <p class="t-two">难受没有网络...</p>
+            </center>
+            <button type="button" class="btn btn-primary first-page">&lt;&lt;</button>
+            <button type="button" class="btn btn-primary prev">&lt;</button>
+            <span></span>
+            <button type="button" class="btn btn-primary next">&gt;</button>
+            <button type="button" class="btn btn-primary last-pages">&gt;&gt;</button>
+        </div>
+        <div class="body-right asking">
+            <center>
+                <p class="act t-one">您还没有发表过评论哟，快去听课发表吧....</p>
+                <p class="t-two">难受没有网络...</p>
+            </center>
+            <button type="button" class="btn btn-primary first-page">&lt;&lt;</button>
+            <button type="button" class="btn btn-primary prev">&lt;</button>
+            <span></span>
+            <button type="button" class="btn btn-primary next">&gt;</button>
+            <button type="button" class="btn btn-primary last-pages">&gt;&gt;</button>
+        </div>
+    </div>
+
+     <div class="div-footer">
+        <div class="f-link">
+            <ul class="">
+                <li class="">
+                    <a href="">联系我们</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">关于网站</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">知识产权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="f-explain">
+            <span>
+      主办方：合肥工业大学管理学院电商系
+    </span>
+            <span>
+      备案号：xxxxxxxxxxxx
+    </span>
+            <br/>
+            <span>
+      说明：本课程适用于大学生教学课程，未经允许，请勿转载！
+    </span>
+        </div>
+    </div>
+
+</body>
+
+</html>

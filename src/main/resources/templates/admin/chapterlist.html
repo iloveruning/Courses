@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>管理员后台界面</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="lib/global.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/datatable/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+</head>
+<body class="bg-gray">
+<header class="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span>管理员 <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-right">
+                        <li class="dropdown-header text-center">账户</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw pull-right"></i> 详情
+                            </a>
+                            <a data-toggle="modal" href="#modal-user-settings">
+                                <i class="fa fa-cog fa-fw pull-right"></i> 设置
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt pull-right"></i> 注销</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="maincontent">
+    <div class="container">
+        <div class="row">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">章节列表</p>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-hover" id="chapterList">
+                        <thead>
+                        <tr class="active">
+                            <td>序号</td>
+                            <td>名称</td>
+                            <td>详情</td>
+                            <td>删除</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--单元详情的模态框-->
+    <div class="modal fade" style="z-index: 100000" id="unitModal" role="dialog" aria-labelledby="mymodallog"
+         data-backdrop="static"
+         aria-hidden='true'>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">教学单元详情</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <!--单元基本信息-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span>单元序号</span>
+                                <select class="form-control" id="unumber" name="">
+                                    <option value="">请选择本课序号</option>
+                                    <option value="第1课">第1课</option>
+                                    <option value="第2课">第2课</option>
+                                    <option value="第3课">第3课</option>
+                                    <option value="第4课">第4课</option>
+                                    <option value="第5课">第5课</option>
+                                    <option value="第6课">第6课</option>
+                                    <option value="第7课">第7课</option>
+                                    <option value="第8课">第8课</option>
+                                    <option value="第9课">第9课</option>
+                                    <option value="第10课">第10课</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" id="uid" name="uid"
+                                       required="required"
+                                       class="form-control" style="display: none"/>
+                                <label for="uname">单元名称</label>
+                                <input type="text" id="uname" name="uname" placeholder="请输入单元名称"
+                                       required="required"
+                                       class="form-control"/>
+                            </div>
+                            <div class="col-md-12" id="showEditor">
+
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-block btn-info" onclick="updateModalUnit()">更新</button>
+                            </div>
+                            <hr/>
+
+                        </div>
+
+                        <hr/>
+
+                        <!--资料部分-->
+                        <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p class="panel-title">上传资料</p>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-12">
+                                        <div class="report-file">
+                                            <span>上传文件</span>
+                                            <input tabindex="3" id="modalFilePreview" size="3" name="report"
+                                                   class="file-prew"
+                                                   type="file" onchange="showModalFileName()"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" id="modalFileName" style="width: 100%"
+                                               class="form-control"/>
+                                        <select class="form-control" id="modalFileDescription" name="" style="width: 100%">
+                                            <option value="">请选择资料描述</option>
+                                            <option value="单元习题">单元习题</option>
+                                            <option value="教学课件">教学课件</option>
+                                            <option value="考试大纲">考试大纲</option>
+                                            <option value="辅助资料">辅助资料</option>
+                                        </select>
+                                        <button class="btn btn-block" onclick="uploadModalFile()">上传</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <h5>待提交列表</h5>
+                            <div id="uploadModalFiles">
+
+                            </div>
+                            <button class="btn btn-primary btn-block" onclick="addModalFilesToCourse()">添加到本课</button>
+                        </div>
+                        <div class="row">
+
+                            <table class="table table-hover" id="modalFileList">
+                                <thead>
+                                <tr class="active">
+                                    <td>序号</td>
+                                    <td>中文描述</td>
+                                    <td>资料名称</td>
+                                    <td>演示</td>
+                                    <td>更新</td>
+                                    <td>删除</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-2">
+                                <h5>现有知识点:</h5></div>
+                            <div class="col-md-10" id="modalKPList">
+
+
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row line-frame">
+                            <div class="col-md-2 text-right">
+                                <h4>请选择知识点:</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="" id="modalKPSelect" class="form-control"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-block" onclick="addModalKP()">添加</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--章节详情-->
+    <div class="modal fade " id="chapterModal" style="z-index: 1000000" tabindex="-1" role="dialog"
+         data-backdrop="static" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">章节详情</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<button data-toggle="modal" data-target='#chapterDetailmodal'>a那肯定</button>-->
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input class="form-control" value="" id="chapterIdModal" style="display: none"/>
+                            <label for="chapterNumberModal">章节序号</label>
+                            <input class="form-control" value="" id="chapterNumberModal"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="chapterNameModal">章节名称</label>
+                            <input class="form-control" value="" id="chapterNameModal"/>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <button class="btn btn-primary btn-block" onclick="">更新</button>
+                            <h4 >知识点:</h4>
+                            <div class="" id="zhiShiDianModal">
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table table-hover" id="unitListTableModal">
+                                <!--<caption class="caption">本章详情</caption>-->
+                                <thead>
+                                <tr class="active">
+                                    <td>序号</td>
+                                    <td>名称</td>
+                                    <td>内容简介</td>
+                                    <td>详情</td>
+                                    <td>删除</td>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--<button type="button" class="btn btn-primary">保存更改</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</section>
+<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/chapterList.js"></script>
+<script type="text/javascript" src="lib/wangEditor.min.js"></script>
+<script type="text/javascript" src="lib/datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="lib/datatable/js/dataTables.bootstrap.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+</body>
+
+</html>

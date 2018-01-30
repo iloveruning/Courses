@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程界面</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/course2.js"></script>
+    <script src="js/addLogin.js"></script>
+    <script src="js/md5.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/course2.css" />
+    <link rel="stylesheet" type="text/css" href="css/lrtk.css" />
+</head>
+
+<body>
+    <div class="div-header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="/home">
+          <img src="img/logo.jpg" alt="logo" />
+        </a>
+            </div>
+            <!--隔离区-->
+            <div class="mainCourse indexList">
+                <a href="" title="">核心课程</a>
+            </div>
+            <div class="teachers indexList">
+                <a href="teachers.html" title="">教师团队</a>
+            </div>
+            <!--隔离区-->
+            <div class="search">
+                <input type="text" />
+                <div>
+                    <i class="glyphicon glyphicon-search icno-search"></i>
+                </div>
+            </div>
+            <div class="person" style="display: none;">
+                <img src="" style="border-radius:20px;height:40px;width:40px;" class="userImg">
+                <span style="margin-left:25px;" class="dropdown">
+                    <a class="dropdown-toggle user-name" data-toggle="dropdown" href="#"><b class="caret"></b></a><ul class="dropdown-menu">
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">帮助与反馈</a></li>
+                    <li class="logout"><a href="#">退出登录</a></li>
+                    </ul></span>
+            </div>
+            <div class="user">
+                <ul class="user-list">
+                    <li class="user-oper li user-dl" data-toggle="modal" data-target="#myModaLogin">登录</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper li" data-toggle="modal" data-target="#myModalSign">注册</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper">关于</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="div-body">
+        <div class="body-top">
+            <div class="main">
+                <p class="source">
+                    
+                </p>
+                <p class="name">
+                    
+                </p>
+                <div class="begin">
+                    <a href="" class="btn btn-success" title="">开始学习</a>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-main">
+            <div class="main-left">
+                <p class="course-intro">
+                    <a data-toggle="modal" data-target="#myModal" href="javascript:void(0);" class="btn btn-success btn-sm">查看详情</a>
+                </p>
+                <p class="chapter">
+                    章节
+                </p>
+                <hr/>
+                <div id="subNavBox" class="subNavBox">
+                </div>
+                
+                <div class="point">
+                  <p>
+                    课程知识点
+                  </p>
+                  <hr/>
+                  <ul>
+                  </ul>
+                </div>
+
+                <div class="works">
+                  <p>优秀作品展示</p>
+                  <hr/>
+                  <ul>
+                    <li>
+                      
+                    <li style="clear:both;"></li>
+                  </ul>
+                </div>
+
+            </div>
+            <div class="main-right">
+                <div>
+                    <p class="teacher-name">
+                        
+                    </p>
+                    <img class="teacher-img" src="" />
+                    <p class="teacher-intro">
+                        
+                    </p>
+                </div>
+                <div class="datas">
+                  <p>
+                    课程资料
+                  </p>
+                  <ul>
+                    
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="div-footer">
+        <div class="f-link">
+            <ul class="">
+                <li class="">
+                    <a href="">联系我们</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">关于网站</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">知识产权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="f-explain">
+            <span>
+      主办方：合肥工业大学管理学院电商系
+    </span>
+            <span>
+      备案号：xxxxxxxxxxxx
+    </span>
+            <br/>
+            <span>
+      说明：本课程适用于大学生教学课程，未经允许，请勿转载！
+    </span>
+        </div>
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 60%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body" style="height: 500px;">
+                    <div id="div" style="width: 100%; height: 100%; border: 0px none;">
+                        
+                    </div>
+                    <iframe name='' frameborder='0' style="width: 100%; height: 100%; border: 0px none;" src=""></iframe>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</body>
+
+</html>

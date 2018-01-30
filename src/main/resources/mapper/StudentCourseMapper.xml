@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.glxy.mapper.StudentCourseMapper">
+
+
+
+
+    <insert id="save">
+       INSERT INTO student_course(student_id, course_id)
+       VALUES (#{sid},#{cid})
+   </insert>
+
+
+    <delete id="delete">
+        DELETE FROM student_course
+        WHERE student_id=#{sid} AND course_id=#{cid}
+    </delete>
+
+
+    <select id="findCourseBySid" resultType="com.hfut.glxy.entity.StudentCourse">
+        SELECT course_id,update_time  FROM student_course
+        WHERE student_id=#{sid} AND is_delete=0
+        ORDER BY update_time DESC
+    </select>
+
+
+    <select id="findStudentsByCid" resultType="com.hfut.glxy.entity.StudentCourse">
+        SELECT student_id,update_time  FROM student_course
+        WHERE course_id=#{cid} AND is_delete=0
+        ORDER BY update_time DESC
+    </select>
+
+
+    <update id="cancel">
+        UPDATE student_course SET is_delete=1
+        WHERE student_id=#{sid} AND course_id=#{cid}
+    </update>
+
+
+    <select id="isChosed" resultType="int">
+        SELECT count(*) FROM student_course
+        WHERE student_id=#{sid} AND course_id=#{cid}
+    </select>
+
+    <select id="isDelete" resultType="int">
+        SELECT is_delete FROM student_course
+        WHERE student_id=#{sid} AND course_id=#{cid}
+    </select>
+
+
+    <update id="updateTime">
+        UPDATE student_course SET update_time=now(),is_delete=0
+        WHERE student_id=#{sid} AND course_id=#{cid}
+    </update>
+
+
+
+
+
+
+</mapper>

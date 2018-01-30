@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.glxy.mapper.ReplyMapper">
+
+
+    <select id="findCommentReplies" parameterType="int" resultType="java.util.Map">
+        SELECT r1.id id,r1.content content,r1.student_id s1,r1.update_time time,r2.student_id s2
+        FROM reply r1 LEFT JOIN reply r2 ON r1.reply=r2.id
+        WHERE r1.comment_id=#{cid} AND r1.is_delete=0
+    </select>
+
+
+    <select id="findById" resultType="java.util.Map">
+        SELECT r1.id id,r1.content content,r1.student_id s1,r1.update_time time,r2.student_id s2
+        FROM reply r1 LEFT JOIN reply r2 ON r1.reply=r2.id
+        WHERE r1.id=#{id}
+    </select>
+
+
+    <delete id="deleteByCommentId">
+        DELETE FROM reply WHERE comment_id=#{cid}
+    </delete>
+
+
+
+
+
+
+
+</mapper>

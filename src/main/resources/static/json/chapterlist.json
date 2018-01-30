@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "成功",
+  "data": {
+    "chapterNumber": "12",
+    "chapterChinese": "中文藐视",
+    "dataType": "string"
+  }
+}

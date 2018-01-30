@@ -1,0 +1,14 @@
+{
+  "success":true,
+  "message": "成功了",
+  "data": {
+    "inCourseGroup": "group1",
+    "CourseNumber": "1",
+    "CourseName": "hello name",
+    "CourseType": "type1",
+    "CourseScore": "23",
+    "CourseTime": "12",
+    "CourseTeacher": "mrs,wang",
+    "CourseDetails": "对不起,我懒得写了"
+  }
+}

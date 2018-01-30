@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "message": "成功",
+  "data": {
+    "chapter": {
+      "length": 9,
+      "number": 7,
+      "xuhao": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "stNumber": "elll",
+    "stName": "wangzi"
+  }
+}

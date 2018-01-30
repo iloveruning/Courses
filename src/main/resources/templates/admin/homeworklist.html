@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>管理员后台界面</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="description" content="由明理苑成员完成">
+    <meta name="keywords" content="合工大,课程网站,精品课程">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" href="lib/fontawesome-all.css">
+    <link rel="stylesheet" href="lib/global.css">
+    <link rel="stylesheet" type="text/css" href="lib/sidebar.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="lib/datatable/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+
+</head>
+
+<body class="bg-gray">
+<header class="header">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav" style="margin: 0">
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        <span>管理员 <i class="caret"></i></span>
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-right">
+                        <li class="dropdown-header text-center">账户</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw pull-right"></i> 详情
+                            </a>
+                            <a data-toggle="modal" href="#modal-user-settings">
+                                <i class="fa fa-cog fa-fw pull-right"></i> 设置
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-sign-out-alt pull-right"></i> 注销</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="maincontent">
+    <div class="bg-gray">
+        <div class="container">
+            <div class="row">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p class="panel-title">作业列表</p>
+                    </div>
+                    <div class="panel-body">
+                        <table id="homeworkListDetails" class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>学生姓名</td>
+                                <td>文件</td>
+                                <td>详情</td>
+                                <td>删除</td>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="modal fade" id="homeworkmodal" style="z-index: 1000000" tabindex="-1" role="dialog"-->
+         <!--data-backdrop="static">-->
+        <!--<div class="modal-dialog " role="document">-->
+            <!--<div class="modal-content">-->
+                <!--<div class="modal-header">-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+                            <!--aria-hidden="true">&times;</span></button>-->
+                    <!--<h4 class="modal-title">作业详情</h4>-->
+                <!--</div>-->
+                <!--<div class="modal-body">-->
+
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<label for="stname">学生姓名</label>-->
+                            <!--<input class="form-control" value="" id="stname"/>-->
+                            <!--<label for="homeworkname">作业名称:</label>-->
+                            <!--<input class="form-control" id="homeworkname"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>-->
+
+                <!--</div>-->
+            <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+    <!--</div>-->
+
+</section>
+<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="js/homeworkList.js"></script>
+<script type="text/javascript" src="lib/datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="lib/datatable/js/dataTables.bootstrap.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+
+</body>
+
+</html>

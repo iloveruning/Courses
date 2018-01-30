@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+
+body,
+html {
+    height: 100%;
+    background: #E2E2E2
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px "微软雅黑", "宋体", "Arial Narrow", HELVETICA;
+    -webkit-text-size-adjust: 100%;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 以上实际使用若已初始化可删除 */
+
+
+/* nav */
+
+.leftnav {
+    /* width: 220px; */
+    width: 100%;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+}
+
+.leftnav a {
+    display: block;
+    overflow: hidden;
+    padding-left: 50px;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+}
+
+.leftnav a:hover {
+    color: white;
+}
+
+.leftnav a span {
+    margin-left: 30px;
+}
+
+.left-nav-item {
+    position: relative;
+}
+
+.left-nav-item.nav-show {
+    border-bottom: none;
+}
+
+.left-nav-item ul {
+    display: none;
+    background: rgba(0, 0, 0, .1);
+}
+
+.left-nav-item.nav-show ul {
+    display: block;
+}
+
+.left-nav-item>a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.leftnav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+
+
+/*---------------------*/
+
+.icon-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+
+
+/* .icon-more::after {
+    content: "\e621";
+}
+ */
+
+
+/*---------------------*/
+
+.nav-show .icon-more {
+    transform: rotate(90deg);
+}
+
+.nav-show,
+.left-nav-item>a:hover {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+.nav-show>a:before,
+.left-nav-item>a:hover:before {
+    opacity: 1;
+}
+
+.left-nav-item li:hover a {
+    color: #FFF;
+    background: rgba(0, 0, 0, .1);
+}
+
+
+
+/* nav-mini */
+
+.left-nav-mini.leftnav {
+    width: 60px;
+}
+
+.left-nav-mini.leftnav .nav-icon {
+    /* margin-left:-2px; */
+}
+
+.left-nav-mini.leftnav .left-nav-item>a span {
+    display: none;
+}
+
+.left-nav-mini.leftnav .icon-more {
+    margin-right: -20px;
+}
+
+.left-nav-mini.leftnav .left-nav-item ul {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 180px;
+    z-index: 99;
+    background: #3C474C;
+    overflow: hidden;
+}
+
+.left-nav-mini.leftnav .left-nav-item:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.left-nav-mini.leftnav .left-nav-item:hover .left-nav-item a {
+    color: #FFF;
+}
+
+.left-nav-mini.leftnav .left-nav-item:hover a:before {
+    opacity: 1;
+}
+
+.left-nav-mini.leftnav .left-nav-item:hover ul {
+    display: block;
+}
+
+img:hover {
+    cursor: pointer;
+}

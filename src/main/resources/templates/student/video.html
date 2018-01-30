@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>视频播放页面</title>
+    <link rel="stylesheet" type="text/css" href="css/video.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/comment.css" />
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/jquery.flexText.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/commentOne.js"></script>
+    <script src="js/commentTwo.js"></script>
+    <script src="js/commentThree.js"></script>
+    <script src="js/commentFor.js"></script>
+    <script src="js/commentFive.js"></script>
+    <script src="js/commentSix.js"></script>
+    <script src="js/box.js"></script>
+    <script src="js/addLogin.js"></script>
+    <script src="js/md5.js"></script>
+</head>
+
+<body>
+    <div class="div-header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="/home">
+          <img src="img/logo.jpg" alt="logo" />
+        </a>
+            </div>
+            <!--隔离区-->
+            <div class="mainCourse indexList">
+                <a href="" title="">核心课程</a>
+            </div>
+            <div class="teachers indexList">
+                <a href="teachers.html" title="">教师团队</a>
+            </div>
+            <!--隔离区-->
+            <div class="search">
+                <input type="text" />
+                <div>
+                    <i class="glyphicon glyphicon-search icno-search"></i>
+                </div>
+            </div>
+            <div class="person" style="display: none;">
+                <img src="" style="border-radius:20px;height:40px;width:40px;" class="userImg">
+                <span style="margin-left:25px;" class="dropdown">
+                    <a class="dropdown-toggle user-name" data-toggle="dropdown" href="#"><b class="caret"></b></a><ul class="dropdown-menu">
+                    <li><a href="#">个人主页</a></li>
+                    <li><a href="#">帮助与反馈</a></li>
+                    <li class="logout"><a href="#">退出登录</a></li>
+                    </ul></span>
+            </div>
+            <div class="user">
+                <ul class="user-list">
+                    <li class="user-oper li user-dl" data-toggle="modal" data-target="#myModaLogin">登录</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper li" data-toggle="modal" data-target="#myModalSign">注册</li>
+                    <li class="user-pile">|</li>
+                    <li class="user-oper">关于</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="div-video">
+        <div class="file div-hide">
+            <iframe width="60%" height="500" style="margin-left: 20%" src=""></iframe>
+        </div>
+        <div class="div-video-body ">
+            <div class="hide-box">
+            </div>
+            <div class="show">
+                <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="100%" height="500" data-setup='{}'>
+                    <source src="" />
+                    <!--字幕设置-->
+                    <track kind="captions" src="" srclang="en" label="English"></track>
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="video-list">
+        <div class="prev">
+        </div>
+        <div class="list">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="next">
+        </div>
+    </div>
+    <div class="div-body">
+        <div class="more">
+            <p class="c-title">课程详情</p>
+            <!-- <div class="body-left">
+                <p>
+                    主讲人：
+                </p>
+                <img src="" alt="" />
+                <p class="tech">
+                </p> 
+            </div> -->
+            <div class="body-right">
+                <div class="title">
+                </div>
+                <div class="r-l">
+                    <div class="course-about">
+                        <p>本章教学要求：</p>
+                        <p class="c-need"></p>
+                    </div>
+                    <div class="test">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div style="border-left: 1px solid #ccc;height: 100%;width: 1px;float: left;"></div>
+                <div class="r-r">
+                    <p>
+                        本章知识点
+                    </p>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <p class="c-title">课程评价</p>
+            <!--*********隔离区***************-->
+            <div class="commentAll">
+                <!--评论区域 begin-->
+                <div class="reviewArea clearfix">
+                    <textarea class="content comment-input" placeholder="有什么想说的就写下来吧&hellip;" onkeyup="keyUP(this)"></textarea>
+                    <a href="javascript:;" class="plBtn">评论</a>
+                </div>
+                <!--评论区域 end-->
+                <!--回复区域 begin-->
+                <div class="comment-show" id="commit-list">
+                </div>
+                <!--回复区域 end-->
+                <div class="fy" style="padding-left: 50px;margin-top: 20px;">
+                    <button type="button" class="btn btn-primary first-page">
+                        &lt;&lt;</button>
+                            <button type="button" class="btn btn-primary prev">
+                                &lt;</button>
+                                    <span>
+        </span>
+                                    <button type="button" class="btn btn-primary next">&gt;</button>
+                                    <button type="button" class="btn btn-primary last-pages">&gt;&gt;</button>
+                </div>
+            </div>
+            <!--*********隔离区***************-->
+        </div>
+    </div>
+    <div class="div-footer">
+        <div class="f-link">
+            <ul class="">
+                <li class="">
+                    <a href="">联系我们</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">关于网站</a>
+                </li>
+                <li class="">|</li>
+                <li class="">
+                    <a href="">知识产权声明</a>
+                </li>
+            </ul>
+        </div>
+        <div class="f-explain">
+            <span>
+        主办方：合肥工业大学管理学院电商系
+      </span>
+            <span>
+        备案号：xxxxxxxxxxxx
+      </span>
+            <br/>
+            <span>
+        说明：本课程适用于大学生教学课程，未经允许，请勿转载！
+      </span>
+        </div>
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 60%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body" style="height: 500px;">
+                    <div style="width: 100%; height: 100%; border: 0px none;display: none;">
+                        
+                    </div>
+                    <iframe name='' frameborder='0' style="width: 100%; height: 100%; border: 0px none;" src=""></iframe>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</body>
+
+</html>

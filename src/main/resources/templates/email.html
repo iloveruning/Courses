@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>管理学院精品课程网</title>
+</head>
+<body>
+  <div style="height: 400px;width:700px;margin:100px auto;">
+    <div style="width: 300px;margin:0 auto;">
+      <img src="http://image.chenliangliang.xin/glxy" style="width: 300px;height: 70px;" />
+  </div>
+  <div class="" style="height:300px;width:700px;">
+    <div style="width: 100px;margin:0 auto;margin-top: 25px;font-weight: bold">
+      注册验证码
+
+
+    </div>
+    <hr/>
+    <div>
+      <p>您好，<span style="color:gray;font-weight: 700" th:text="${email}"></span> !</p>
+      <p>欢迎注册管理学院精品课程网站，请将验证码填写到注册页面：</p>
+      <p>验证码：<span style="color:#e85600;font-weight: 700" th:text="${code}"></span></p>
+    </div>
+  </div>
+  </div>
+  
+</body>
+</html>

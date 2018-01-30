@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hfut.glxy.mapper.StudentMapper">
+
+
+    <select id="findNameAndImgById" parameterType="string" resultType="com.hfut.glxy.entity.Student">
+        SELECT name,img FROM student WHERE id=#{sid}
+    </select>
+
+    <select id="findByEmail" parameterType="string" resultType="com.hfut.glxy.entity.Student">
+        SELECT id,name,img,password,status FROM student WHERE email=#{email}
+    </select>
+
+    <select id="countByEmail" parameterType="string" resultType="int">
+        SELECT count(*) FROM student WHERE email=#{email}
+    </select>
+
+    <select id="findPwById" resultType="string" parameterType="string">
+        SELECT password FROM student WHERE id=#{sid}
+    </select>
+
+
+</mapper>

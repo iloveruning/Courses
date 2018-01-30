@@ -1,0 +1,234 @@
+/* teachers.css */
+*{
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  min-width: 1370px;
+  height: 100%;
+}
+
+.div-header{
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-top: 28px;
+
+}
+.div-header .nav-bar{
+  height: 80px;
+  /* width: 80%; */
+  margin: 0 auto;
+}
+
+.div-header .logo{
+  float: left;
+  height: 50px;
+  width: 200px;
+  margin-top: -13px;
+  margin-left: 50px;
+}
+
+.div-header .logo img{
+  width: 200px;
+  height: 50px;
+}
+
+.div-header .indexList{
+  float: left;
+  margin-left: 50px;
+}
+
+.div-header .indexList a{
+    text-decoration: none;
+    color: #4D555D;
+    font-size: 16px;
+    font-family: 楷体;
+    line-height: 35px;
+}
+
+.div-header .search{
+  width: 340px;
+  /* height: 40px; */
+  height: 32px;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  /* margin-left: 7%;  */
+  margin-left: 15%;
+}
+
+.div-header .search .icno-search{
+  margin-right: 0px;
+}
+.div-header .search input{
+  width: 300px;
+  /* height: 35px; */
+  height: 30px;
+  border: none;
+  border: 0px solid #ccc;
+  outline: none;
+  padding-left: 20px;
+  float: left;
+
+}
+.div-header .search div{
+  float: left;
+ /*  margin-top: 15px; */
+  margin-top: 8px;
+}
+
+.div-header .search i:hover{
+  cursor: pointer;
+}
+
+.user{
+  width: 300px;
+  height: 50px;
+  float: right;
+  margin-left: 1.6%;
+  /* float: left; */
+  padding-left: 100px;
+  margin-top: -8px;
+}
+.user .user-list li {
+  float: left;
+  list-style: none;
+  line-height: 50px;
+}
+
+.user .user-list .user-oper:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.user-pile{
+  padding: 0 10px;
+}
+
+.div-body{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.div-body .group-teacher{
+
+}
+
+.div-body .ther-per{
+  width: 48%;
+  margin-top: 20px;
+  float: left;
+  /* border: 1px solid red; */
+}
+
+.div-body .ther-per div{
+  float: left;
+}
+
+.div-body .ther-per img{
+  width: 120px;
+  height: 120px;
+
+}
+
+.div-body .ther-per p{
+  line-height: 10px;
+}
+
+.div-body .ther-per .per-right{
+  padding-top: 10px;
+  margin-left: 30px;
+}
+
+.div-body .body-left{
+  float: left;
+  width: 230px;
+  height: 100%;
+  /* border-right: 1px solid #ccc; */
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.05)
+}
+
+.div-body ul li {
+  list-style: none;
+  height: 50px;
+  width: 230px;
+  border-radius: 5px;
+  padding-top: 17px;
+  padding-left: 15px;
+}
+
+.div-body ul li:hover {
+  cursor: pointer;
+  background-color: #ccc
+}
+
+.div-body ul li i{
+  margin-right: 25px;
+}
+
+.checked {
+  background-color: #ccc;
+}
+
+.body-right{
+  height: 100%;
+  margin-top: 50px;
+  width: 65%;
+  float: left;
+  padding-left: 80px;
+  display: none;
+  box-shadow: 0 2px 4px 0 rgba(7, 17, 27, .06);
+  background-color: rgba(0, 0, 0, 0.03);
+  padding-bottom: 20px;
+
+}
+
+.live{
+  display: block;
+}
+
+.clear{
+  clear: both;
+}
+
+.div-footer{
+  margin-top: 50px;
+  height: 200px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.div-footer .f-link{
+  width: 310px;
+  height: 50px;
+  margin: 0px auto;
+}
+
+.div-footer .f-link ul li{
+  float: left;
+  list-style: none;
+  margin: 10px;
+  line-height: 50px;
+}
+
+.div-footer .f-explain{
+  color: gray;
+  font-size: 14px;
+  font-family: 楷体;
+  width:500px;
+  margin: 0 auto;
+}
+
+.div-footer .f-explain span{
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}
